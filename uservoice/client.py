@@ -5,6 +5,7 @@ import operator
 import array
 import urllib.request, urllib.parse, urllib.error
 import urllib.request, urllib.error, urllib.parse
+from urllib import urlencode
 import json
 import uservoice
 from requests_oauthlib import OAuth1
@@ -86,7 +87,7 @@ class Client(object):
         elif method == 'PUT':
             json_resp = requests.put(url, json.dumps(params), headers=self.default_headers, auth=self.oauth)
         elif method == 'GET':
-            json_resp = requests.get(url, headers=self.default_headers, auth=self.oauth)
+            json_resp = requests.get(url, params=params, headers=self.default_headers, auth=self.oauth)
         elif method == 'DELETE':
             json_resp = requests.delete(url, headers=self.default_headers, auth=self.oauth)
 
