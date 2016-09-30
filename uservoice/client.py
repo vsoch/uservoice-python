@@ -5,7 +5,6 @@ import operator
 import array
 import urllib.request, urllib.parse, urllib.error
 import urllib.request, urllib.error, urllib.parse
-from urllib import urlencode
 import json
 import uservoice
 from requests_oauthlib import OAuth1
